@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "es">
+
+<head>
+
+<script type="text/javascript">
+<!--
+// PROGRAMA
+function programa1() {
+
+    //Solicitar que se ingrese el valor.
+    var F = prompt("Valor en Mbits/s");
+
+    //Formula.
+     var C = F/8;
+
+     //Mostrar el valor obtenido en la conversiÃ³n.
+	
+     window.alert( F + " Mbits/s son: "+ F + "/8 =" + C +  "Mbytes/s");
+	 
+}
+
+function programa2() {
+
+    //Trafico generado.
+    var C = prompt("Tamaño peticiones clientes (Bytes)");
+	 //Respuesta media servidor.
+    var S = prompt("Respuesta media del servidor(Bytes)");
+	 //Solicitar que se ingrese el valor en grados celsius.
+    var N = prompt("Numero maximo de peticiones por hora (Bytes)");
+
+    //Trafico generado.
+     var T = (parseInt(C) + parseInt(S)) * parseInt(N);
+	 
+	 window.alert("Trafico generado:" + T + "Bytes/hora");
+	 
+	 var T = T/3600
+	 
+	 var A = prompt("Ancho de banda contratado(Bits/s)");
+	 
+	 var A = (parseInt(A)*1000000)/8;
+	 
+	 var U = (T/A)*100;
+	 
+	 window.alert("Porcentaje de utilizaciu00f3n del ancho de banda:" + U + "%")
+	 console.log("Porcentaje de utilizaciu00f3n del ancho de banda:" + U + "%")
+
+     //Mostrar el valor obtenido en la conversiÃ³n en el paso 2.
+     //window.alert("La temperatura " + C + " expresada en grados Fahrenheit es: "+ F);
+}
+
+
+//-->
+</script>
+</head>
+<body>
+<input type="button" onclick="programa1()" value="Pasar de Mbs a MBs" />
+<input type="button" onclick="programa2()" value="Porcentaje de utilizacion del ancho de banda" />
+</body>
+
+</html>
